@@ -1,0 +1,69 @@
+
+.a1 {  /* sets the base properties for anamation 1*/
+  width: 300px;
+  height: 400px;
+  background-color: blue;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+}
+.a2{ /* sets the base properties for anamation 2*/
+font-size: 8vmin; /* allows the font size to change */
+transition: color 5s, padding 1vmin ;  /* transition of color/padding*/
+
+
+}
+.a2:hover { /*hover over makes the color and padding change */
+
+  color: #0066ff;
+  padding-top: 10vmin;
+  padding-left: 300px;
+}
+.a3:hover{   /*hover over makes the anamation play */
+  width: 600px;
+  height: 600px;
+  position: relative;
+
+  animation-direction: alternate-reverse;
+  animation: example_2 3s;
+}
+.a4{ /*uses the ease in property infintly  */
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: relative;
+  animation: example_3 5s infinite;
+  animation-timing-function: ease-in;
+}
+.a5{ /*uses the ease in and out property */
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: relative;
+  animation: example_3 5s infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes example_4 { /*moves the div */
+  from{left:0px;}
+  to {left: 700px;}
+}
+@keyframes example_3 {/*moves the div*/
+  from{left:0px;}
+  to {left: 700px;}
+
+}
+@keyframes example_2{/*changes the background color and fontsize  */
+  0% {background-color: blue; font-size: 10px;}
+  33%{background: yellow; font-size: 30px;}
+  66%{background: orange;font-size: 60px;}
+  100%{background: blue; font-size: 100px;}
+
+}
+
+@keyframes example {/*changes the background color  */
+  0% {background-color: blue;}
+  33%{background: yellow;}
+  66%{background: orange;}
+  100%{background: blue;}
+
+}
